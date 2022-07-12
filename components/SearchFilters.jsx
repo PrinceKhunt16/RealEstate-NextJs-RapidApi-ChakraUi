@@ -63,7 +63,7 @@ export default function SearchFilters() {
                         <Input
                             placeholder='Type Here'
                             value={searchTerm}
-                            w='300px'
+                            w='full'
                             fontWeight={'medium'} fontSize={'lg'}
                             focusBorderColor='gray.300'
                             onChange={(e) => setSearchTerm(e.target.value)}

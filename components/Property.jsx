@@ -15,8 +15,8 @@ const breakpoints = {
     xl: '33.33333%'
 }
 
-const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalId } }) => (
-    <Link href={`/property/${externalId}`} passHref>
+const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID } }) => (
+    <Link href={`/property/${externalID}`} passHref>
         <Flex className="cardBody"  flexWrap='wrap' w={breakpoints} paddingTop='0px' justifyContent='flex-start' cursor='pointer' >
             <Box background={"#4299e114"} w='full' borderRadius={"1px"}>
                 <Box w='full' className="homeCardImageBox">
