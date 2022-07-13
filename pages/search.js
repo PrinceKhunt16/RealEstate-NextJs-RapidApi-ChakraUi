@@ -20,9 +20,9 @@ export default function Search({ properties }) {
                 bg={'blue.50'}
                 borderBottom={'1px'}
                 borderColor={'blue.100'}
-                p={'2'}
+                p={'3'}
                 fontWeight={'bold'}
-                fontSize={'2xl'}
+                fontSize={'xl'}
                 justifyContent={'center'}
                 alignItems={'center'}
             >
@@ -35,16 +35,16 @@ export default function Search({ properties }) {
                 bg={'blue.50'}
                 borderBottom={'1px'}
                 borderColor={'blue.100'}
-                p={'2'}
+                p={'3'}
                 fontWeight={'bold'}
-                fontSize={'2xl'}
+                fontSize={'xl'}
                 justifyContent={'center'}
                 alignItems={'center'}
                 marginTop={"8px"}
             >
                 <Text>Search Property By Location</Text>
             </Flex>
-            {locationFilter && <LocationFilter /> }
+            {locationFilter && <LocationFilter />}
             <Text fontSize='2xl' p='4' fontWeight='bold'>
                 Properties {router.query.purpose}
             </Text>

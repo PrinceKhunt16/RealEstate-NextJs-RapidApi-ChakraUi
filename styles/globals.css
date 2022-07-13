@@ -57,6 +57,10 @@ a {
   padding: 0;
 }
 
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  width: 0px;
+}
+
 .filterOption::-webkit-scrollbar {
   width: 10px;
 }
