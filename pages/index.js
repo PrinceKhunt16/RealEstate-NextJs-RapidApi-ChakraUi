@@ -1,5 +1,4 @@
-import Link from "next/link"
-import { Flex, Box, Text, Button } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from "../components/Property"
 
@@ -23,13 +22,17 @@ const fontOfTwoComponents = {
   base: '4xl', sm: '4xl', md: '5xl', lg: '5xl', xl: '5xl'
 }
 
+const hOneOfSlogan = {
+  base: '3xl', sm: '4xl', md: '5xl', lg: '5xl', xl: '5xl'
+}
+
 export default function Home({ propertiesForRent, propertiesForSale }) {
   return (
     <Box>
       <Box display={"flex"} flexWrap={"wrap"} paddingTop={"12"} paddingBottom={"12"} background={"blue.100"} alignItems={"center"}>
         <Box padding={"5"} width={firstDiv}>
           <Text fontSize='xl' color='gray.700' fontWeight='bold' paddingBottom={"2"}>Rent and Buy homes</Text>
-          <Text fontSize={'5xl'} fontWeight='bold'>Rental and Buy Homes for Everyone</Text>
+          <Text fontSize={hOneOfSlogan} fontWeight='bold'>Rental and Buy Homes for Everyone</Text>
           <Text fontSize='xl' fontWeight='bold' paddingTop='5' paddingBottom='3' color='gray.800'>Explore from Apartments, builder floors, villas and more</Text>
         </Box>
         <Box display={secondDivDisplay} width={secondDiv}>

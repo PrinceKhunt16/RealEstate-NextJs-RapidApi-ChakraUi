@@ -1,16 +1,15 @@
-import { Box, Flex, Spacer, Text } from '@chakra-ui/layout';
-import { Avatar } from '@chakra-ui/avatar';
-import { FaBed, FaBath } from 'react-icons/fa';
-import { BsCoin } from 'react-icons/bs';
-import { AiFillHome } from 'react-icons/ai'
-import { GoVerified } from 'react-icons/go';
+import { Box, Flex, Text } from '@chakra-ui/layout';
 import millify from 'millify';
 import { baseUrl, fetchApi } from '../../utils/fetchApi';
+import ImageSlider from "../../components/ImageSlider"
 
 const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => {
     return (
-        <Box maxWidth='1000px' margin='auto' p='2'>
+        <Box maxWidth='1000px' margin='auto' p="0">
             <Box w='full' p='6'>
+                <Box>
+                    <ImageSlider photos={photos} />
+                </Box>
                 <Box marginTop='2'>
                     <Text fontSize='lg' marginBottom='2' fontWeight='bold'>{title}</Text>
                     <Text lineHeight='2' textAlign={"justify"} fontWeight={'bold'} fontSize={'l'} color='gray.600'>{description}</Text>
@@ -49,7 +48,7 @@ const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title
                 </Flex>
                 <Box>
                     {amenities.length && <Text fontSize='lg' marginBottom='2' fontWeight='bold' marginTop='5'>Facilites</Text>}
-                    <Flex flexWrap='wrap' justifyContent={"space-between"}>
+                    <Flex flexWrap='wrap' justifyContent={"flex-start"}>
                         {amenities?.map((item) => (
                             item?.amenities?.map((amenity) => (
                                 <Text key={amenity.text} fontWeight='bold' color='blue.400' fontSize='l' p='2' bg='blue.50' m='1' borderRadius='5'>
