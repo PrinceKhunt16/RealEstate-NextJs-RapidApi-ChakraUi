@@ -3,11 +3,13 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'
 import { Flex, Box, Text, Icon } from '@chakra-ui/react';
 import SearchFilters from '../components/SearchFilters';
+import LocationFilter from "../components/LocationFilter"
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from '../components/Property';
 
 export default function Search({ properties }) {
     const [searchFilters, setSearchFilters] = useState(false);
+    const [locationFilter, setLocationFilter] = useState(false);
     const router = useRouter();
 
     return (
@@ -15,18 +17,34 @@ export default function Search({ properties }) {
             <Flex
                 onClick={() => setSearchFilters(!searchFilters)}
                 cursor={'pointer'}
-                bg={'gray.100'}
+                bg={'blue.50'}
                 borderBottom={'1px'}
-                borderColor={'gray.200'}
+                borderColor={'blue.100'}
                 p={'2'}
-                fontWeight={'black'}
-                fontSize={'lg'}
+                fontWeight={'bold'}
+                fontSize={'2xl'}
                 justifyContent={'center'}
                 alignItems={'center'}
             >
                 <Text>Search Property By Filters</Text>
             </Flex>
             {searchFilters && <SearchFilters />}
+            <Flex
+                onClick={() => setLocationFilter(!locationFilter)}
+                cursor={'pointer'}
+                bg={'blue.50'}
+                borderBottom={'1px'}
+                borderColor={'blue.100'}
+                p={'2'}
+                fontWeight={'bold'}
+                fontSize={'2xl'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                marginTop={"8px"}
+            >
+                <Text>Search Property By Location</Text>
+            </Flex>
+            {locationFilter && <LocationFilter /> }
             <Text fontSize='2xl' p='4' fontWeight='bold'>
                 Properties {router.query.purpose}
             </Text>
