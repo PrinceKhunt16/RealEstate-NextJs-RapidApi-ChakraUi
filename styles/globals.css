@@ -72,3 +72,14 @@ a {
 .filterOption::-webkit-scrollbar-thumb {
   background: #bee3f8;
 }
+
+.bannerimage {
+  clip-path: polygon(0% 0px, 90% 0%, 100% 100%, 0px 100%);
+}
+
+@media only screen and (max-width: 991px) {
+  .bannerimage {
+    clip-path: polygon(0% 0px, 100% 0%, 100% 100%, 0px 100%);
+  }
+
+}

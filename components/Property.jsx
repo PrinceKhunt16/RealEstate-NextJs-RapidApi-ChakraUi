@@ -36,7 +36,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, contactName, r
                         </Box>
                         <Flex alignItems='flex-start' paddingTop={"0px"} paddingBottom={"6px"} color='blue.400' fontWeight='bold' fontSize='lg' justifyContent='flex-start' gap={"4"} flexDirection={"row"}>
                             <Box display={"flex"} alignItems={"center"}>
-                                <BsCoin /> <Box color='black' marginLeft={"1"}> {millify(price)} {rentFrequency && `/${rentFrequency}`} </Box>
+                                <BsCoin /> <Box color='black' marginLeft={"1"}> {millify(price)} {rentFrequency && `/ ${rentFrequency}`} </Box>
                             </Box>
                         </Flex>
                         <Flex alignItems='flex-start' paddingTop={"0px"} color='blue.400' fontWeight='bold' fontSize='lg' justifyContent='flex-start' gap={"4"} flexDirection={"row"}>

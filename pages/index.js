@@ -3,11 +3,11 @@ import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from "../components/Property"
 
 const firstDiv = {
-  sm: '100%', md: '65%', lg: '60%', xl: '50%'
+  sm: '100%', md: '100%', lg: '60%', xl: '60%'
 }
 
 const secondDiv = {
-  sm: '100%', md: '35%', lg: '40%', xl: '50%'
+  sm: '0%', md: '0%', lg: '40%', xl: '40%'
 }
 
 const secondDivDisplay = {
@@ -22,20 +22,14 @@ const fontOfTwoComponents = {
   base: '4xl', sm: '4xl', md: '5xl', lg: '5xl', xl: '5xl'
 }
 
-const hOneOfSlogan = {
-  base: '3xl', sm: '4xl', md: '5xl', lg: '5xl', xl: '5xl'
-}
-
 export default function Home({ propertiesForRent, propertiesForSale }) {
   return (
     <Box>
-      <Box display={"flex"} flexWrap={"wrap"} paddingTop={"12"} paddingBottom={"12"} background={"blue.100"} alignItems={"center"}>
-        <Box padding={"5"} width={firstDiv}>
-          <Text fontSize='xl' color='gray.700' fontWeight='bold' paddingBottom={"2"}>Rent and Buy homes</Text>
-          <Text fontSize={hOneOfSlogan} fontWeight='bold'>Rental and Buy Homes for Everyone</Text>
-          <Text fontSize='xl' fontWeight='bold' paddingTop='5' paddingBottom='3' color='gray.800'>Explore from Apartments, builder floors, villas and more</Text>
+      <Box display={"flex"} flexWrap={"wrap"} background={"blue.100"} alignItems={"center"}>
+        <Box width={firstDiv}>
+          <img className="bannerimage" style={{width: "100%", height: "430px", objectFit: "cover"}} src="https://images7.alphacoders.com/110/thumb-1920-1108495.png" alt="homepage photo" />
         </Box>
-        <Box display={secondDivDisplay} width={secondDiv}>
+        <Box width={secondDiv} display={secondDivDisplay}>
           <Text fontSize={fontSizeSecondDiv} opacity={"0.8"} textAlign={"center"} color='blue.500' fontWeight='normal'>
             Real Estate
           </Text>
