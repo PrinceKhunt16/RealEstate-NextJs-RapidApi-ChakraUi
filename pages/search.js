@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import Image from 'next/image'
-import { Flex, Box, Text, Icon } from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
 import SearchFilters from '../components/SearchFilters';
 import LocationFilter from "../components/LocationFilter"
 import { baseUrl, fetchApi } from '../utils/fetchApi';

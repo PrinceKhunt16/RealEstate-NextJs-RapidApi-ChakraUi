@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Flex, Select, Box, Text, Input, Spinner, Icon, Button } from '@chakra-ui/react';
+import { Flex, Box, Text, Input, Spinner, Icon } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { MdCancel } from 'react-icons/md';
-import { filterData, getFilterValues } from '../utils/filterData';
+import { getFilterValues } from '../utils/filterData';
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 
 export default function SearchFilters() {
-    const [filters] = useState(filterData);
     const [searchTerm, setSearchTerm] = useState('');
     const [locationData, setLocationData] = useState();
     const [showLocations, setShowLocations] = useState(true);
